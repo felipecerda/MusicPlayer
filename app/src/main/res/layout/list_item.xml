@@ -8,6 +8,7 @@
 
     <TextView
         android:id="@+id/song_text_view"
+        style="@style/SongStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="Mucky Weekend"/>
