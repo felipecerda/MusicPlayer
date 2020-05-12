@@ -3,4 +3,5 @@
 
     <string name="songs">Songs</string>
     <string name="podcasts">Podcasts</string>
+    <string name="now_playing">Now Playing</string>
 </resources>

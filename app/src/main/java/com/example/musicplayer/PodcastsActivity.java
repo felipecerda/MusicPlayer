@@ -3,6 +3,7 @@ package com.example.musicplayer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
@@ -68,6 +69,24 @@ public class PodcastsActivity extends AppCompatActivity {
 
                 // Start the new activity
                 startActivity(songsIntent);
+            }
+        });
+
+        // Set a click listener for the NowPlaying title
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Get the selected item
+                String selectedTitle = ((TextView) view.findViewById(R.id.song_text_view)).getText().toString();
+                String selectedArtist = ((TextView) view.findViewById(R.id.artist_text_view)).getText().toString();
+
+                //Create the intent to open the Now Playing screen
+                Intent playingIntent = new Intent(PodcastsActivity.this, NowPlaying.class);
+                playingIntent.putExtra("title_name", selectedTitle);
+                playingIntent.putExtra("artist_name", selectedArtist);
+
+                // Start the new activity
+                startActivity(playingIntent);
             }
         });
 
