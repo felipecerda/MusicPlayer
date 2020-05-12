@@ -9,13 +9,17 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 
 public class SongAdapter extends ArrayAdapter<Song> {
 
-    public SongAdapter(Activity context, ArrayList<Song> songs){
+    private int mColorResourceId;
+
+    public SongAdapter(Activity context, ArrayList<Song> songs, int colorResourceId){
         super(context, 0, songs);
+        mColorResourceId = colorResourceId;
     }
 
     @NonNull
@@ -34,6 +38,13 @@ public class SongAdapter extends ArrayAdapter<Song> {
 
         TextView artistTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
         artistTextView.setText(currentSong.getArtistName());
+
+        // Set the theme color for the list item
+        View textContainer = listItemView.findViewById(R.id.title_view);
+        // Find the color that the resource ID maps to
+        int color = ContextCompat.getColor(getContext(), mColorResourceId);
+        // Set the background color of the text container View
+        textContainer.setBackgroundColor(color);
 
         return listItemView;
     }

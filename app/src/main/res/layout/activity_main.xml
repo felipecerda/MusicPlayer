@@ -1,36 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.musicplayer.MainActivity">
-
-    <TextView
-        android:id="@+id/songs"
-        style="@style/CategoryStyle"
-        android:background="#455A64"
-        android:text="@string/songs" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray" />
-
-    <TextView
-        android:id="@+id/podcasts"
-        style="@style/CategoryStyle"
-        android:background="#455A64"
-        android:text="@string/podcasts" />
-
-</LinearLayout>
--->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,8 +15,8 @@
         <TextView
             android:id="@+id/songs"
             style="@style/CategoryStyle"
-            android:background="@color/colorPrimary"
             android:layout_weight="1"
+            android:background="@color/colorPrimary"
             android:text="@string/songs" />
 
         <View
@@ -52,17 +27,16 @@
         <TextView
             android:id="@+id/podcasts"
             style="@style/CategoryStyle"
-            android:background="@color/colorPrimaryDark"
             android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
             android:text="@string/podcasts" />
     </LinearLayout>
 
-    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:scrollbars="none"
-        android:padding="16dp" />
+        android:scrollbars="none" />
 
 </LinearLayout>

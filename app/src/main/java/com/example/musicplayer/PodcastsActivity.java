@@ -10,31 +10,6 @@ import android.view.View.OnClickListener;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-/*
-public class PodcastsActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.song_list);
-
-        //Creates the ArrayList to store podcast titles
-        ArrayList<Song> podcasts = new ArrayList<Song>();
-
-        //Add songs
-        podcasts.add(new Song("APG 423 - Down the Hatch", "Airline Pilot Guy"));
-        podcasts.add(new Song("Episode 84: Completing the trifecta", "AvTalk - Aviation Podcast"));
-
-        SongAdapter adapter = new SongAdapter(this, podcasts);
-
-        ListView listView = (ListView) findViewById(R.id.list);
-
-        listView.setAdapter(adapter);
-
-    }
-
-}
-*/
 
 public class PodcastsActivity extends AppCompatActivity {
 
@@ -49,8 +24,16 @@ public class PodcastsActivity extends AppCompatActivity {
         //Add songs
         podcasts.add(new Song("APG 423 - Down the Hatch", "Airline Pilot Guy"));
         podcasts.add(new Song("Episode 84: Completing the trifecta", "AvTalk - Aviation Podcast"));
+        podcasts.add(new Song("Buble Wrap And Prayers", "Rework"));
+        podcasts.add(new Song("Saying how you are feeling", "Coffee Break German"));
+        podcasts.add(new Song("Living on Hope", "Rework"));
+        podcasts.add(new Song("Saying your name", "Coffee Break German"));
+        podcasts.add(new Song("APG 412 - Caution: Whale Turbulence", "Airline Pilot Guy"));
+        podcasts.add(new Song("Episode 83: Have we hit the bottom?", "AvTalk - Aviation Podcast"));
+        podcasts.add(new Song("Breadcamp", "Rework"));
+        podcasts.add(new Song("Saying where you are from", "Coffee Break German"));
 
-        SongAdapter adapter = new SongAdapter(this, podcasts);
+        SongAdapter adapter = new SongAdapter(this, podcasts, R.color.colorPrimaryDark);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
@@ -64,7 +47,7 @@ public class PodcastsActivity extends AppCompatActivity {
             // The code in this method will be executed when the Songs category is clicked on.
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the Songs Activity
+                // Create a new intent to open the Main Activity
                 Intent songsIntent = new Intent(PodcastsActivity.this, MainActivity.class);
 
                 // Start the new activity

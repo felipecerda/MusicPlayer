@@ -11,48 +11,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-/*
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        // Find the View that shows the Songs category
-        TextView songs = (TextView) findViewById(R.id.songs);
-
-        // Set a click listener on that View
-        songs.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the Songs category is clicked on.
-            @Override
-            public void onClick(View view) {
-                // Create a new intent to open the Songs Activity
-                Intent songsIntent = new Intent(MainActivity.this, SongsActivity.class);
-
-                // Start the new activity
-                startActivity(songsIntent);
-            }
-        });
-
-        // Find the View that shows the Podcasts category
-        TextView podcasts = (TextView) findViewById(R.id.podcasts);
-
-        // Set a click listener on that View
-        podcasts.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the Podcasts category is clicked on.
-            @Override
-            public void onClick(View view) {
-                // Create a new intent to open the Podcasts Activity
-                Intent podcastsIntent = new Intent(MainActivity.this, PodcastsActivity.class);
-
-                // Start the new activity
-                startActivity(podcastsIntent);
-            }
-        });
-    }
-}
-*/
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,18 +25,18 @@ public class MainActivity extends AppCompatActivity {
         //Add songs
         songs.add(new Song("Family", "The Interrupters"));
         songs.add(new Song("Roots Radical", "Rancid"));
-        songs.add(new Song("Roots Radical", "Rancid"));
-        songs.add(new Song("Roots Radical", "Rancid"));
-        songs.add(new Song("Roots Radical", "Rancid"));
-        songs.add(new Song("Roots Radical", "Rancid"));
-        songs.add(new Song("Roots Radical", "Rancid"));
-        songs.add(new Song("Roots Radical", "Rancid"));
-        songs.add(new Song("Roots Radical", "Rancid"));
-        songs.add(new Song("Roots Radical", "Rancid"));
-        songs.add(new Song("Roots Radical", "Rancid"));
-        songs.add(new Song("Roots Radical", "Rancid"));
+        songs.add(new Song("Learn To Fly", "Foo Fighters"));
+        songs.add(new Song("Want You Bad", "The Offspring"));
+        songs.add(new Song("Best Of You", "Foo Fighters"));
+        songs.add(new Song("God Save The Queen", "Sex Pistols"));
+        songs.add(new Song("Survival", "Eminem"));
+        songs.add(new Song("We Called It America", "NOFX"));
+        songs.add(new Song("Basket Case", "Green Day"));
+        songs.add(new Song("Janie Jones", "The Clash"));
+        songs.add(new Song("Anarchy in the UK", "Sex Pistols"));
+        songs.add(new Song("Blitzkrieg Bop", "Ramones"));
 
-        SongAdapter adapter = new SongAdapter(this, songs);
+        SongAdapter adapter = new SongAdapter(this, songs, R.color.colorPrimary);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
