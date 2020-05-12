@@ -40,7 +40,7 @@
         <TextView
             android:id="@+id/songs"
             style="@style/CategoryStyle"
-            android:background="#455A64"
+            android:background="@color/colorPrimary"
             android:layout_weight="1"
             android:text="@string/songs" />
 
@@ -52,7 +52,7 @@
         <TextView
             android:id="@+id/podcasts"
             style="@style/CategoryStyle"
-            android:background="#455A64"
+            android:background="@color/colorPrimaryDark"
             android:layout_weight="1"
             android:text="@string/podcasts" />
     </LinearLayout>

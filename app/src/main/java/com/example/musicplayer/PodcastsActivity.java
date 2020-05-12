@@ -81,7 +81,7 @@ public class PodcastsActivity extends AppCompatActivity {
                 String selectedArtist = ((TextView) view.findViewById(R.id.artist_text_view)).getText().toString();
 
                 //Create the intent to open the Now Playing screen
-                Intent playingIntent = new Intent(PodcastsActivity.this, NowPlaying.class);
+                Intent playingIntent = new Intent(PodcastsActivity.this, NowPlayingActivity.class);
                 playingIntent.putExtra("title_name", selectedTitle);
                 playingIntent.putExtra("artist_name", selectedArtist);
 
